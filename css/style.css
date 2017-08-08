@@ -5,8 +5,8 @@
     text-align: center;
 }
 
-.vid, .vid-seekbar {
-    width: 80em;
+#vid, .vid-seekbar {
+    width: 1200px;
 }
 .vid-seekbar{
     margin: -5px auto 0;
@@ -17,4 +17,14 @@
     width: 0%;
     height: inherit;
     background-color: green;
+}
+
+.question{
+    position: absolute;
+    top: 730px;
+    left: 500px;
+    width: 20px;
+    border: 1px blue solid;
+    border-radius: 100%;
+    
 }
