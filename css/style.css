@@ -70,3 +70,18 @@
 .check-ans-btn {
     font-size: 20px;
 }
+
+.score-div{
+    position: absolute;
+    top: 500px;
+    left: 1220px;
+    width: 150px;
+    height: 150px;
+    padding: 40px 10px 0;
+    font-size: 50px;
+    border: 3px #000 solid;
+    border-radius: 100%;
+}
+.score-spane{
+    margin: 0;
+}
