@@ -1,6 +1,5 @@
 
-var seekVar,
-    quizInterval;
+var seekVar;
 
 function seekFun() {
     $(".inside-seekbar").animate({
@@ -9,6 +8,5 @@ function seekFun() {
 
     if(parseInt($(".inside-seekbar").css("width")) >= 1140){
         clearInterval(seekVar);
-        clearInterval(quizInterval);
     }
 }
