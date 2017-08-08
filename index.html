@@ -7,17 +7,24 @@
 
 <body>
     <div class="main-container">
-        <img class="play-btn" src="img/Play-Button-PNG-Photo.png"/>
-        <video id="vid">
+        <img class="play-btn" src="img/Play-Button-PNG-Photo.png" />
+        <video id="vid" controls>
 	<source src="videos/Lv1-U1-L3-Vid-L(V1).mp4" type="video/mp4">
 </video>
         <div class="vid-seekbar">
             <div class="inside-seekbar"></div>
         </div>
         <div class="pausePoints">
-        	<div class="question" style="left: 600px;">1</div>
-        	<div class="question" style="left: 700px;">2</div>
-        	<div class="question" style="left: 900px;">3</div>
+            <div class="question" style="left: 720px;">1</div>
+            <div class="question" style="left: 800px;">2</div>
+            <div class="question" style="left: 900px;">3</div>
+        </div>
+        <div class="quiz-div .quiz-div-hide">
+            <div class="quiz"></div>
+            <p class="answer">
+                <input type="text" name="enteredAns" class="entered-ans" /> <span class="ans-span" ></span>
+            </p>
+            <button class="check-ans-btn">Check Your Answer</button>
         </div>
     </div>
     <script src="scripts/jquery.min.js"></script>

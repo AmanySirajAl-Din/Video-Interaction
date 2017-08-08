@@ -8,8 +8,8 @@
 .play-btn {
     z-index: 10;
     position: absolute;
-    top: 302px;
-    left: 45%;
+    top: 320px;
+    left: 46%;
     width: 9em;
     opacity: .8;
 }
@@ -45,4 +45,23 @@
     width: 20px;
     border: 1px blue solid;
     border-radius: 100%;
+}
+
+.quiz-div{
+    position: absolute;
+    top: 120px;
+    left: 650px;
+    width: 0px; /* to be 500 px */
+    height: 0px; /* to be 400 px */
+    padding: 0px; /* to be 50 px */
+    font-size: 30px;
+    background-color: aliceblue;
+    border: 1px blue solid;
+    overflow: hidden;
+}
+
+.entered-ans{
+    width: 100px;
+    font-size: 30px;
+    direction: rtl;
 }
