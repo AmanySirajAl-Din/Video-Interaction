@@ -1,30 +1,48 @@
-.main-container{
+.main-container {
     position: relative;
     margin: auto;
     padding: 50px;
     text-align: center;
 }
 
-#vid, .vid-seekbar {
-    width: 1200px;
+.play-btn {
+    z-index: 10;
+    position: absolute;
+    top: 302px;
+    left: 45%;
+    width: 9em;
+    opacity: .8;
 }
-.vid-seekbar{
+
+.play-btn:hover {
+    width: 9.5em;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#vid,
+.vid-seekbar {
+    width: 900px;
+}
+
+.vid-seekbar {
     margin: -5px auto 0;
     height: 30px;
+    overflow: hidden;
     background-color: #bababa;
 }
-.inside-seekbar{
+
+.inside-seekbar {
     width: 0%;
     height: inherit;
     background-color: green;
 }
 
-.question{
+.question {
     position: absolute;
     top: 730px;
     left: 500px;
     width: 20px;
     border: 1px blue solid;
     border-radius: 100%;
-    
 }
