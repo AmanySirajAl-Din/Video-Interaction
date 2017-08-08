@@ -64,4 +64,9 @@
     width: 100px;
     font-size: 30px;
     direction: rtl;
+    text-align: center;
+}
+
+.check-ans-btn {
+    font-size: 20px;
 }

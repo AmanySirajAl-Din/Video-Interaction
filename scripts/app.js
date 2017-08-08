@@ -29,9 +29,7 @@ function seekFun() {
     if(parseInt($(".inside-seekbar").css("width")) >= 1140){
         clearInterval(seekVar);
         clearInterval(quizInterval);
-        $(".quiz").text(quizArrayObj[0].quiz);
-        $(".quiz-div").css("transform", "scale(1)");
-        
+       
     }
 }
 
@@ -40,6 +38,12 @@ function quizFun(){
         vid.pause();
         clearInterval(seekVar);
         clearInterval(quizInterval);
-        
+         $(".quiz").text(quizArrayObj[0].quiz);
+        $(".ans-span").text(quizArrayObj[0].ans);
+        $(".quiz-div").animate({
+            width: "500px",
+            height: "300px",
+            padding: "100px 50px"
+        }, 200);
     }
 }
