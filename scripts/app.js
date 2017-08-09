@@ -4,7 +4,7 @@ var compArrayObj = [
         quiz: "ما الحرف الدي سنتكلم عنه؟",
         ans: "حرف",
         correctAns: "الفاء",
-    }    
+    }
 ];
 
 var mcqArrayObj = [
@@ -50,16 +50,9 @@ function seekFun() {
 
 function quizFun() {
     if (vid.currentTime >= 4.6 && vid.currentTime <= 4.7) {
-        vid.pause();
-        clearInterval(seekVar);
-        clearInterval(quizInterval);
         $(".quiz").text(compArrayObj[currentQuiz].quiz);
         $(".ans-span").text(compArrayObj[currentQuiz].ans);
-        $(".quiz-div").animate({
-            width: "500px",
-            height: "300px",
-            padding: "100px 50px"
-        }, 200);
+        showQuizDiv();
     }
 }
 
@@ -69,11 +62,11 @@ $(".comp-check").click(function () {
         $(".score-span").text(score);
     }
     currentQuiz++;
-    
+
     hideQuizDiv();
 });
 
-function hideQuizDiv(){
+function hideQuizDiv() {
     setTimeout(function () {
         $(".quiz-div").css({
             "width": "0",
@@ -86,4 +79,16 @@ function hideQuizDiv(){
             quizInterval = setInterval(quizFun, 10);
         }, 500);
     }, 300);
+}
+
+function showQuizDiv() {
+    vid.pause();
+    clearInterval(seekVar);
+    clearInterval(quizInterval);
+    
+    $(".quiz-div").animate({
+        width: "500px",
+        height: "300px",
+        padding: "100px 50px"
+    }, 200);
 }
