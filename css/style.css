@@ -87,14 +87,18 @@
     margin: 0;
 }
 
+.feedback{
+    margin: 10px;
+}
+
 .wrong-ans:before{
-    content: '✘ Wrong Answer';
+    content: 'إجابة خاطئة ✘';
     padding-bottom: 5px; 
     color: red;
 }
 
 .correct-ans:before{
-     content: '✔ Correct Answer';
+     content: 'إجابة صحيحة ✔';
     padding-left: 5px;
     color: #019b01;
 }
