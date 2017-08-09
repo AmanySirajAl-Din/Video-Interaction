@@ -1,15 +1,29 @@
 var vid = document.getElementById("vid");
-var quizArrayObj = [
+var compArrayObj = [
     {
         quiz: "ما الحرف الدي سنتكلم عنه؟",
         ans: "حرف",
         correctAns: "الفاء",
+    }    
+];
+
+var mcqArrayObj = [
+    {
+        quiz: "ما المكان المتبقس لحرف الفاء؟",
+        ans1: "حرف الفاء أول الكلمة",
+        ans2: "حرف الفاء أخر الكلمة",
+        ans3: "حرف الفاء وسط الكلمة",
+        choicesNum: 3,
+        correctAnsID: 2
     }
 ];
 var score = 0,
     currentQuiz = 0;
 var seekVar,
     quizInterval;
+
+$(".quiz-part").hide();
+
 vid.addEventListener("click", function (e) {
     e.target.pause();
     $(".play-btn").show();
@@ -39,8 +53,8 @@ function quizFun() {
         vid.pause();
         clearInterval(seekVar);
         clearInterval(quizInterval);
-        $(".quiz").text(quizArrayObj[currentQuiz].quiz);
-        $(".ans-span").text(quizArrayObj[currentQuiz].ans);
+        $(".quiz").text(compArrayObj[currentQuiz].quiz);
+        $(".ans-span").text(compArrayObj[currentQuiz].ans);
         $(".quiz-div").animate({
             width: "500px",
             height: "300px",
@@ -49,13 +63,17 @@ function quizFun() {
     }
 }
 
-$(".check-ans-btn").click(function () {
-    if ($(".entered-ans").val().replace(/\s/g, '') == quizArrayObj[currentQuiz].correctAns) {
-
+$(".comp-check").click(function () {
+    if ($(".entered-ans").val().replace(/\s/g, '') == compArrayObj[currentQuiz].correctAns) {
         score++;
         $(".score-span").text(score);
-
     }
+    currentQuiz++;
+    
+    hideQuizDiv();
+});
+
+function hideQuizDiv(){
     setTimeout(function () {
         $(".quiz-div").css({
             "width": "0",
@@ -68,4 +86,4 @@ $(".check-ans-btn").click(function () {
             quizInterval = setInterval(quizFun, 10);
         }, 500);
     }, 300);
-});
+}
