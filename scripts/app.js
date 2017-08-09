@@ -1,4 +1,5 @@
 var vid = document.getElementById("vid");
+var quizTypeArr = [$(".complete-quiz"), $(".mcq-quiz")]
 var compArrayObj = [
     {
         quiz: "ما الحرف الدي سنتكلم عنه؟",
@@ -7,16 +8,7 @@ var compArrayObj = [
     }
 ];
 
-var mcqArrayObj = [
-    {
-        quiz: "ما المكان المتبقس لحرف الفاء؟",
-        ans1: "حرف الفاء أول الكلمة",
-        ans2: "حرف الفاء أخر الكلمة",
-        ans3: "حرف الفاء وسط الكلمة",
-        choicesNum: 3,
-        correctAnsID: 2
-    }
-];
+
 var score = 0,
     currentQuiz = 0;
 var seekVar,
@@ -53,6 +45,7 @@ function quizFun() {
         $(".quiz").text(compArrayObj[currentQuiz].quiz);
         $(".ans-span").text(compArrayObj[currentQuiz].ans);
         showQuizDiv();
+        quizTypeArr[currentQuiz].show();
     }
 }
 
@@ -60,10 +53,15 @@ $(".comp-check").click(function () {
     if ($(".entered-ans").val().replace(/\s/g, '') == compArrayObj[currentQuiz].correctAns) {
         score++;
         $(".score-span").text(score);
+        $(".entered-ans").css("color", "#019b01");
+        $(".feedback").addClass("correct-ans");
+    }else{
+        $(".entered-ans").css("color", "red");
+        $(".feedback").addClass("wrong-ans");
     }
     currentQuiz++;
 
-    hideQuizDiv();
+    setTimeout(hideQuizDiv, 500);
 });
 
 function hideQuizDiv() {

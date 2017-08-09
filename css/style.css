@@ -65,6 +65,7 @@
     font-size: 30px;
     direction: rtl;
     text-align: center;
+    border: 0px;
 }
 
 .check-ans-btn {
@@ -84,4 +85,16 @@
 }
 .score-span{
     margin: 0;
+}
+
+.wrong-ans:before{
+    content: '✘ Wrong Answer';
+    padding-bottom: 5px; 
+    color: red;
+}
+
+.correct-ans:before{
+     content: '✔ Correct Answer';
+    padding-left: 5px;
+    color: #019b01;
 }

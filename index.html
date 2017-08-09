@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Video Interaction</title>
     <link href="css/style.css" rel="stylesheet" />
@@ -14,27 +15,33 @@
         <div class="vid-seekbar">
             <div class="inside-seekbar"></div>
         </div>
-        
-        
+
+
         <div class="pausePoints">
             <div class="question" style="left: 720px;">1</div>
             <div class="question" style="left: 800px;">2</div>
             <div class="question" style="left: 900px;">3</div>
         </div>
-        
-        
+
+
         <div class="quiz-div .quiz-div-hide">
             <div class="quiz"></div>
-            <p class="answer">
-                <input type="text" name="enteredAns" class="entered-ans" placeholder="....."/>
-                <span class="ans-span" ></span>
-            </p>
-            <button class="check-ans-btn">Check Your Answer</button>
+            <div class="feedback"></div>
+            <div class="quiz-part complete-quiz">
+                <p class="answer">
+                    <input type="text" name="enteredAns" class="entered-ans" placeholder="....." />
+                    <span class="ans-span"></span>
+                </p>
+                <button class="check-ans-btn comp-check">Check Your Answer</button>
+            </div>
+            
         </div>
-        
-        <div class="score-div">Score <p class="score-span">0</p></div>
+        <div class="score-div">Score
+            <p class="score-span">0</p>
+        </div>
     </div>
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/app.js"></script>
 </body>
+
 </html>
